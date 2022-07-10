@@ -1,0 +1,4 @@
+Rusz g³ow¹! Java
+DDD. Kompedium wiedzy
+Wzorce Projektowe
+Praca z zastanym kodem
