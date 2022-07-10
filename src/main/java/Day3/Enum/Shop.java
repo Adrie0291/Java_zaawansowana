@@ -1,11 +1,8 @@
-package Day4Dziedziczenie.New;
+package Day3.Enum;
 
 public class Shop {
-    public void pack(Shirt shirt) {
-
-        switch (shirt.getSize()) {
-            // enumy wspolpracuja ze switche, nie trzeba wspominac klasy,
-            // switch wie z jakiej klasy ma szukac, bo wyciagacy z klay shirt Size wiec wie  o tym
+    public void pack(Shirt shirt) { // metoda przyjmuje obiekt shirt
+        switch (shirt.getSize()) { // odwolujemy sie do rozmiaru w klasie Size (getter !)
             case XXL:
             case XL:
             case L:
@@ -13,16 +10,14 @@ public class Shop {
                 System.out.println("Pakujê do du¿ej torby");
                 break;
             case S:
-            case XXS:
             case XS:
+            case XXS:
                 System.out.println("Pakujê do ma³ej torby");
                 break;
             default:
                 System.out.println("Nie rozpoznano rozmiaru");
+
         }
         System.out.println("Rozmiar liczbowo: " + shirt.getNumericSize());
-        /* Wyswietlenie dodatkwoej informacji z
-        // metody getNumericSize w klasie Shirt. Ta sama metoda jest returnem
-         wartosci docelowej w enumie ! */
     }
 }

@@ -5,6 +5,7 @@ import java.util.List;
 
 public class AnimalDemo {
     public static void main(String[] args) {
+        /*
         Monkey monkey = new Monkey();
         Monkey monkey2 = new Monkey("Filutek", 8, 20);
 
@@ -36,6 +37,8 @@ public class AnimalDemo {
 
         System.out.println("--------- Zwierze Guide -------------");
         AnimalGuide animalGuide = new AnimalGuide();
+
+         */
         //   animalGuide.feedMonkey(monkey); 1. metoda nie robiæ tak
         //   animalGuide.feedWhale(whale);   1. metoda nie robiæ tak
       //  animalGuide.feedAnimal(monkey);
@@ -50,13 +53,16 @@ public class AnimalDemo {
         animal = new Monkey(); // animal to zmienna ! tutaj zmieniamy ta zmienna na inny obiekt (ma³pa)
         animal.makeSound(); // wyswietli sie metoda na klasie Malpa !
 
-        /*POLIMORFIZM - ró¿nego rodzaju obiekty mo¿emy wstawiaæ do tego samego typu zmiennej, a wiêc metody tej zmiennej bêd¹ dostosywaæ siê do tego jak dany obiekty jaki tam jest tam nadpisuje
-        // zdolnoœæ jêzyka obiektowego do umieszczania we wspólnej zmiennej ró¿nych typów obiektów
-        // metody takiej zmiennej dostoswuj¹ swoje dzia³anie w zale¿noœci jak dany obiekt j¹ nadpisaæ
-        // najwa¿niejsza w³aœciwoœæ programowania obiektowego (niski poziom skomplikowania projektu, ³atwoœæ dodawania kolejnych funkcjonalnoœci
-        // dok³adanie nowych klas dziedzicz¹cych po wspólnej klasie, która jest w u¿yciu w aplikacji
+        /*POLIMORFIZM - ró¿nego rodzaju obiekty mo¿emy wstawiaæ do tego samego typu zmiennej, a wiêc metody tej zmiennej bêd¹ dostosywaæ
+          siê do tego jak dany obiekty jaki tam jest tam nadpisuje
+         zdolnoœæ jêzyka obiektowego do umieszczania we wspólnej zmiennej ró¿nych typów obiektów
+         metody takiej zmiennej dostoswuj¹ swoje dzia³anie w zale¿noœci jak dany obiekt j¹ nadpisaæ
+         najwa¿niejsza w³aœciwoœæ programowania obiektowego (niski poziom skomplikowania projektu, ³atwoœæ dodawania kolejnych funkcjonalnoœci
+         dok³adanie nowych klas dziedzicz¹cych po wspólnej klasie, która jest w u¿yciu w aplikacji
          nie dziedziczymy tylko metod, ale równie¿ typ ! */
-        //-----------------------------------
+
+
+
 
         // Poni¿ej bardzo wa¿ny bl¹d podczas polimorfizmu, nie mo¿emy  tworzyæ obiektu
         // Z abstrakcyjnej klasy nie mo¿na robiæ obiektów ! mog¹ mieæ abstrakcyjne metody

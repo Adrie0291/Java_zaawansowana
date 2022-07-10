@@ -19,5 +19,6 @@ public class Shop {
                 System.out.println("Nie rozpoznano rozmiaru");
 
         }
+
     }
 }
