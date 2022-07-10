@@ -13,7 +13,7 @@ public class Whale {
 
     public Whale() {
         name = "Kraken";
-        age = 60;
+        age = 63;
         weight = 4.5;
     }
 

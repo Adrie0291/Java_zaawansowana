@@ -14,7 +14,7 @@ public class Monkey {
     public Monkey() {
         name = "Jacek";
         age = 8;
-        tailLength = 20;
+        tailLength = 21;
     }
 
     public void haha() {
