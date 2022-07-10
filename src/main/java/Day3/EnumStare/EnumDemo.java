@@ -3,8 +3,8 @@ package Day3.EnumStare;
 public class EnumDemo {
     public static void main(String[] args) {
 
-        Shirt shirt1 = new Shirt("XL");
-        Shirt shirt2 = new Shirt("XXL");
+        Shirt shirt1 = new Shirt(Sizes.XXL);
+        Shirt shirt2 = new Shirt("XL");
 
         System.out.println(shirt1);
         System.out.println(shirt2);
