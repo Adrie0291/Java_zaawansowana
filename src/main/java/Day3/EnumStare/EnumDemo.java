@@ -4,7 +4,7 @@ public class EnumDemo {
     public static void main(String[] args) {
 
         Shirt shirt1 = new Shirt(Sizes.XXL);
-        Shirt shirt2 = new Shirt("XL");
+        Shirt shirt2 = new Shirt(Sizes.S);
 
         System.out.println(shirt1);
         System.out.println(shirt2);
