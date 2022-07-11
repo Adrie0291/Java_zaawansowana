@@ -1,6 +1,6 @@
 package Day4Dziedziczenie.Dziedzic;
 
-public class Monkey {
+public class Monkey extends Animal {
     private String name;
     private int age;
     private int tailLength;
@@ -23,6 +23,11 @@ public class Monkey {
     }
 
     public void jump() {
-        System.out.println(name + "skacze w poszukiwaniu banna!");
+        System.out.println(name + " skacze w poszukiwaniu banna!");
+    }
+
+    public void eat() {
+        super.eat();
+        System.out.println("Jem banana. Bo jestem ma³p¹.");
     }
 }

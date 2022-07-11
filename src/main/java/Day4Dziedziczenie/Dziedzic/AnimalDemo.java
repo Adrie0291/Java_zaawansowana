@@ -13,5 +13,9 @@ public class AnimalDemo {
 
         whale.booing();
         whale.swim();
+
+        // wspólna metoda:
+        monkey.eat();  // jeœli jest nadpisana w jego klasie, wykonaj¹ siê instrukcjê z jego klasy
+        whale.eat();  // jeœli nie ma ¿adnego nadpisania w jego klasie, wykona siê instrukcja z klasy ogólnej
     }
 }

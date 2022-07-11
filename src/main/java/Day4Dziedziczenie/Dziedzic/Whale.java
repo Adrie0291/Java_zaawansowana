@@ -1,6 +1,6 @@
 package Day4Dziedziczenie.Dziedzic;
 
-public class Whale {
+public class Whale extends Animal {
     private String name;
     private int age;
     private double weight;
@@ -22,6 +22,9 @@ public class Whale {
     }
 
     public void swim() {
-        System.out.println(name + "p³ynie majestatycznie");
+        System.out.println(name + " p³ynie majestatycznie.");
+    }
+    public void eat(){
+        System.out.println("Jem plankton. Jestem wielorybem");
     }
 }
