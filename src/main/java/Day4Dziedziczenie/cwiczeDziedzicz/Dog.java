@@ -10,10 +10,20 @@ public class Dog extends Animal{
         this.age = age;
         this.lenghtBody = lenghtBody;
     }
+    public Dog(){
+        name = "Feliks";
+        age = 33;
+        lenghtBody = 4921;
+    }
+
 
     public void sound(){
         System.out.println("Jestem psem. Szczekam");
     }
+    public void robHalas(){
+        sound();
+    }
+
     public void kopanie(){
         System.out.println("Jestem psem. Kopiê dziury");
     }

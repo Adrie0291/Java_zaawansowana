@@ -1,7 +1,9 @@
 package Day4Dziedziczenie.cwiczeDziedzicz;
 
-public class Animal {
+public abstract class Animal {
     public void eat() {
         System.out.println("Jem sobie jedzenie.");
     }
+
+    public abstract void robHalas();
 }

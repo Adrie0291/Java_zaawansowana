@@ -6,6 +6,6 @@ public abstract class Animal {
     }
 
     public void makeSound() {
-    } // metoda abstrakcyjna
+    }
 }
 
