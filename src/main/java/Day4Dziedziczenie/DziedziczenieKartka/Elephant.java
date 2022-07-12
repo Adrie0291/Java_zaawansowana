@@ -1,4 +1,4 @@
-package Day4Dziedziczenie.cwiczeDziedzicz;
+package Day4Dziedziczenie.DziedziczenieKartka;
 
 /*
 Stworzenie 2 klas Elephant oraz Dog.

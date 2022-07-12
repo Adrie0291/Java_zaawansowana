@@ -1,4 +1,6 @@
-package Day4Dziedziczenie;
+package Day4Dziedziczenie.DziedziczenieZajecia;
+
+import Day4Dziedziczenie.DziedziczenieZajecia.Animal;
 
 public class Whale extends Animal {
     private String name;

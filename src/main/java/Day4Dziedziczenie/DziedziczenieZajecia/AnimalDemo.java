@@ -1,13 +1,10 @@
-package Day4Dziedziczenie;
-
-import java.util.ArrayList;
-import java.util.List;
+package Day4Dziedziczenie.DziedziczenieZajecia;
 
 public class AnimalDemo {
     public static void main(String[] args) {
         /*
-        Monkey monkey = new Monkey();
-        Monkey monkey2 = new Monkey("Filutek", 8, 20);
+        Cat monkey = new Cat();
+        Cat monkey2 = new Cat("Filutek", 8, 20);
 
         Whale whale = new Whale();
         Whale whale2 = new Whale("Radek", 45, 7);

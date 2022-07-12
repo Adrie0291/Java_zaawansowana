@@ -1,4 +1,4 @@
-package Day4Dziedziczenie;
+package Day4Dziedziczenie.DziedziczenieZajecia;
 
 public abstract class Animal {
     public void eat() {

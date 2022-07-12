@@ -1,4 +1,4 @@
-package Day4Dziedziczenie.cwiczeDziedzicz;
+package Day4Dziedziczenie.DziedziczenieKartka;
 
 public class Dog extends Animal{
     private String name;
