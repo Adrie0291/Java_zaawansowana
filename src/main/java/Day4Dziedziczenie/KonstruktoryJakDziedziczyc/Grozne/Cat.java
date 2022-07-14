@@ -1,19 +1,16 @@
-package Day4Dziedziczenie.KonstruktoryJakDziedziczyc;
+package Day4Dziedziczenie.KonstruktoryJakDziedziczyc.Grozne;
 
 public class Cat extends Animal {
-    private String name;
-    private int age;
     private int dlugoscOgona;
 
     public Cat(String name, int age, int dlugoscOgona) {
-        this.name = name;
-        this.age = age;
+        super(name, age);
+
         this.dlugoscOgona = dlugoscOgona;
     }
 
     public Cat() {
-        name = "Filemon";
-        age = 8;
+        super("KotSuper",2);
         dlugoscOgona = 4;
     }
 
