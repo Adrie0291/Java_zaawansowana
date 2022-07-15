@@ -19,5 +19,6 @@ public class CitizenDemo {
          */
         System.out.println(town.howManyCanVote());
         town.whoCanVote();
+
     }
 }

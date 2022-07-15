@@ -7,7 +7,7 @@ import Day4Dziedziczenie.KonstruktoryJakDziedziczyc.Grozne.Kangur;
 public class Main {
     public static void main(String[] args) {
         Cat cat = new Cat();
-        Dragon dragon = new Dragon("Charziard",200);
+        Dragon dragon = new Dragon("Charziard",200, "pomaraczowy");
         Kangur kangur = new Kangur("Kao", 7);
 
         System.out.println(cat);

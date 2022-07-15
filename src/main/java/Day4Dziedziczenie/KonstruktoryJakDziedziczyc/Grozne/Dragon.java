@@ -1,8 +1,10 @@
 package Day4Dziedziczenie.KonstruktoryJakDziedziczyc.Grozne;
 
 public class Dragon extends Animal {
-    public Dragon(String name, int age) {
+    private String kolorSkory;
+    public Dragon(String name, int age, String kolorSkory) {
         super(name, age);
+        this.kolorSkory = kolorSkory;
     }
 
     @Override
