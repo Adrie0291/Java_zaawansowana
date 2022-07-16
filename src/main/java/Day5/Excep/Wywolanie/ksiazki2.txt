@@ -1,4 +1,4 @@
 Rusz g³ow¹! Java;2002
-DDD. Kompedium wiedzy;aa
-Wzorce Projektowe;sss
+Kompedium wiedzy;2004
+Wzorce Projektowe;1823
 Praca z zastanym kodem;2000
