@@ -1,6 +1,6 @@
 package Day5.Excep;
 
-public class ExceptionDemo {
+public class ExceptionDemo3 {
     public static void main(String[] args) {
         System.out.println("Start");
         String text = null; // bardzo ³atwo nara¿amy siê na null pointer

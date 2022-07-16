@@ -11,11 +11,13 @@ public class Input {
         System.out.println("Podaj liczbê: ");
 
         try {
-          //  int number = scanner.nextInt();
+            //  int number = scanner.nextInt();
             return scanner.nextInt();
         } catch (InputMismatchException e) {
             System.out.println("Nale¿y podaæ liczbê! ");
             return readNumber();                           // rekurencja, metoda sama sie bedzie wywolowac a¿ do wy³apania wyjatku
+        } finally {
+            System.out.println("Ten blok zawsze siê wykona");
         }
     }
 

@@ -13,7 +13,7 @@ public class Exception2Wyjatki {
             System.out.println(10 / 0);                                             // w tym momencie to w ogole sie nie zostanie wykonane przez blad w linijce 12
         } catch (NullPointerException | StringIndexOutOfBoundsException e) {        // po³¹czony catch z linijki 19
             System.out.println("Wyst¹pi³ nullpointer lub BoundsException");
-        } catch (Exception e) {                                                     // klasa nadrzêdna wyj¹tków,
+        } catch (Exception e) {                                                     // klasa nadrzêdna wyj¹tków, nie wykona siê teraz, bo b³êdy bêda wy³apane w linijce 14
             System.out.println("Nie przewidziany wyj¹tek");
             e.printStackTrace();                                                    // informuje nas w której linijce jest b³¹d
             // } catch (StringIndexOutOfBoundsException e) {                        zamiast rozbijaæ na poszczgólne catche mo¿emy je po³¹czyæ wy¿ej
