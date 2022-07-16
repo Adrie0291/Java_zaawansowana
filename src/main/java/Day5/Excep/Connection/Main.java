@@ -8,9 +8,11 @@ public class Main {
         FileConnection fileConnection = new FileConnection();
         try {
             fileConnection.connect();
-            fileConnection.getBooksFromFile();
+            System.out.println(fileConnection.getBooksFromFile());
         } catch (FileConnectionException e) {
             System.out.println("B³¹d przy po³¹czeniu ");
+        } catch (FileDbConnectionException e) {
+            System.out.println(e.getMessage());
         }
         System.out.println(fileConnection);
     }
