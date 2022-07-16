@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
+// Musielismy obsluzyc wyjatek, inaczej program by sie nie kompilowa³
 public class FileInput4 {
     public List<String> ReadBooks() {
         List<String> booksList = new ArrayList<>();
