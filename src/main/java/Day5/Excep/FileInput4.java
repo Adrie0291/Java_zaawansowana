@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class FileInput4 {
     public List<String> ReadBooks() {
         List<String> booksList = new ArrayList<>();
-        File file = new File("src\\main\\java\\Day5\\Excep\\ksiazki.txt"); // u¿ywamy œciezki relatywnej src. Generalnie podawanie œcie¿ki zajmuje siê obiekt File.
+        File file = new File("src\\Main\\java\\Day5\\Excep\\ksiazki.txt"); // u¿ywamy œciezki relatywnej src. Generalnie podawanie œcie¿ki zajmuje siê obiekt File.
         try {
 
             Scanner scanner = new Scanner(file);

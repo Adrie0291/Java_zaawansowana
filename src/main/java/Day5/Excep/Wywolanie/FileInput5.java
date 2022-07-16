@@ -9,9 +9,9 @@ import java.util.Scanner;
 
 // Tworzenie wlasnych wyjatkow. Chcemy robic obiekty z ksiazek, kazda ma tytul i date wydania
 public class FileInput5 {
-    public List<Book> ReadBooks() throws Exception {
+    public List<Book> ReadBooks() throws BookMapping {         // obsluga wyj¹tku z metody 22 jest zrzucona na metodê Main
         List<Book> booksList = new ArrayList<>();
-        File file = new File("src\\main\\java\\Day5\\Excep\\Wywolanie\\ksiazki2.txt"); // u¿ywamy œciezki relatywnej src. Generalnie podawanie œcie¿ki zajmuje siê obiekt File.
+        File file = new File("src\\Main\\java\\Day5\\Excep\\Wywolanie\\ksiazki2.txt"); // u¿ywamy œciezki relatywnej src. Generalnie podawanie œcie¿ki zajmuje siê obiekt File.
         try {
 
             Scanner scanner = new Scanner(file);
@@ -19,7 +19,7 @@ public class FileInput5 {
                 String line = scanner.nextLine();
                 // przerobienie metody na String
 
-                Book book = mapLineToBook(line);
+                Book book = mapLineToBook(line);   // tutaj wtedy powinien siê znaleŸæ blok try/ catch ale oddelegowujemy go to linijki nr 12
                 booksList.add(book);              // book to teraz obiekt, który dodawany jest do listy booksList
             }
         } catch (
@@ -32,7 +32,7 @@ public class FileInput5 {
         return booksList;
     }
 
-    private Book mapLineToBook(String line) throws Exception { // konwertowanie -> mapowanie ksi¹¿ek na Linie. Przyjmuje linie zwraca ksi¹¿ke
+    private Book mapLineToBook(String line) throws BookMapping { // konwertowanie -> mapowanie ksi¹¿ek na Linie. Przyjmuje linie zwraca ksi¹¿ke // throws - ta metoda rzuca wyj¹tek, obs³uga tego wyj¹tku spada na metodê Book book
         try {
             String[] elements = line.split(";"); // 2 stringi , jeden przed drugi po œredniku
             String title = elements[0]; // element zerowy tytul ksi¹¿ki, element pierwszy to co za œrednikiem
@@ -40,19 +40,21 @@ public class FileInput5 {
             Book book = new Book(title, year);
             return book;
         } catch (Exception exception) {
-            System.out.println("Dla linii: " + line);
-            throw new RuntimeException("Niepoprawny format input dla linii " + line); // wyjatki typu Exception wymagaj¹ obs³ugi try catch ? zmienimy typ wyj¹tku na RunTimeException
+           // System.out.println("Dla linii: " + line);
+           // throw new RuntimeException("Niepoprawny format input dla linii " + line); // wyjatki typu Exception wymagaj¹ obs³ugi try catch ? zmienimy typ wyj¹tku na RunTimeException
+            throw new BookMapping("Niepoprawny format input dla linii " + line, line);
+            // ale nie chcemy robiæ tutaj try catch, chcemy aby faktycznie przerwa³a tê metodê
 
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { // jak tutaj zapiszemy Throws to nam zepsuje program, bo juz nie ma gdzie dalej oddelegowac tego problemu, try catch
         FileInput5 input = new FileInput5();
         try {
             System.out.println(input.ReadBooks());
-        } catch (Exception e) {
+        } catch (BookMapping e) {
             System.out.println("Wystapil wyjatek: ");
-            System.out.println(e.getMessage());
+            System.out.println(e.getLine());
 
         }
     }
