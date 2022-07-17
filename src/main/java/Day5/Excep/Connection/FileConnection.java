@@ -48,6 +48,11 @@ public class FileConnection {
         return lines;
     }
 
+    public void disconnet() {
+        connected = false;
+    }
+
+
     @Override   // to  String po to aby wyswietlac stan fileconnection
     public String toString() {
         return "FileConnection{" +

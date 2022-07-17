@@ -13,8 +13,8 @@ public class Main {
             System.out.println("B³¹d przy po³¹czeniu ");
         } catch (FileDbConnectionException e) {
             System.out.println(e.getMessage());
+        } finally {
+            System.out.println(fileConnection);
         }
-        System.out.println(fileConnection);
     }
-
 }
