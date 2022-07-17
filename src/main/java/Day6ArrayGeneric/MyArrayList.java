@@ -1,9 +1,6 @@
 package Day6ArrayGeneric;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
 
 public class MyArrayList<E> implements List<E> {
     /*zeby traktowac j¹ jak my list, musi implementowaæ list od E
@@ -26,10 +23,29 @@ public class MyArrayList<E> implements List<E> {
 
         }
         elements[actualSize++] = e;
+        if (actualSize == elements.length) { // jesli koniec miejsca - powieksz zbior
+            grow();
+        }
 
-      //   actualSize++;
+        //   actualSize++;
         return true;
     }
+
+    private void grow() { // dodaj 2x tyle miejca 10 - 20 -40 - 80 - 160
+        /*
+        E[] newArray = (E[]) new Object[elements.length * 2];
+        // chcemy stworzyc tablice jako typ generyczny, ale musimy rzutowac object na E
+
+
+        for (int i = 0; i < elements.length; i++) { // przerzucamy stare elementy
+            newArray[i] = elements[i]; // do nowej listy
+            elements = newArray;
+         */
+        elements = Arrays.copyOf(elements, elements.length * 2);
+        // elements - tablica ktora kopiujemy, nowy rozmiar eleme... * 2
+        // ustawiamy jako elements
+    }
+
 
     /*
     @Override
