@@ -73,17 +73,46 @@ public class MyArrayList<E> implements List<E> {
 
 
     @Override
-    public void add(int index, E element) {
+    public void add(int index, E element) { // musimy zrobiæ miejsce na wszystkie elementy
+        // 5,3,12,98 <- wartoœci =4 actualSize
+        // 0,1,2,3, <- pozycja   | zaczynamy od konca, musimy miec dostep do ost. elementu
+        // * dzia³anie pêtli
+        // 5,3,12,98,98
+        // * dzialanie pêtli
+        // 5,3, 12, 12,98  dzia³anie pêtli
+        // 5, 3, 3 , 12, 98
+        //5, 723 , 12 , 98   <-- dodajemy 723 liczbe jak to zrobic
 
+        for (int i = actualSize - 1; i >= index; i--) { // znajdujemy osatni przesuwamy go dalej az bedzie miejsce
+            // jak zrobic miejsc na kolejna liczbe i ustawienie tej liczby
+            // robienie miejsca -> znajdujemy miejsce gdzie jest ostatni element (actualSize -1)
+            // na o 1 wieksza miejsce kopiuje go
+            elemenets[i + 1] = elemenets[i];
+
+        }
+        elemenets[index] = element;
+
+        actualSize++;
+        if (actualSize == elemenets.length)
+            grow();
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return actualSize == 0;
     }
 
     @Override
     public boolean contains(Object o) {
+        for (E elemenet : elemenets) {
+            if (elemenet == null) {
+                break;
+            }
+            //  if (elemenet == o){  ten zapis nie by³by z³y ale dokumentacja wskazuje ze musi byæ equals
+            if (elemenet.equals(o)) {
+                return true;
+            }
+        }
         return false;
     }
 
@@ -112,11 +141,18 @@ public class MyArrayList<E> implements List<E> {
     @Override
     public void clear() {
 
+
     }
 
     @Override
     public E get(int index) {
-        return null;
+        if (index < 0 || index >= actualSize) {
+            // jeœli index mniejszy od 0 albo wiêkszy od aktualnej to wychodzimy poza zakres
+            // brane s¹ pod uwage realne, wartoœci w ArrayList, a nie wirtualne na zapas
+            throw new IndexOutOfBoundsException();
+            // robimy w³asn¹ zasadê wyj¹tku
+        }
+        return elemenets[index];
     }
 
     @Override
