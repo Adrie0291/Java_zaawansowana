@@ -3,97 +3,79 @@ package Day6ArrayGeneric;
 import java.util.*;
 
 public class MyArrayList<E> implements List<E> {
-    /*zeby traktowac j¹ jak my list, musi implementowaæ list od E
-     jak mamy interfejs musimy zdefiniowaæ wszystkie abstrakcyjne metody
-         myArrayList ma pod spodem zwyk³¹ tablicê,  ta tablica bêdzie typu E.
-     */
-    private E[] elements = (E[]) new Object[10]; // generyczna lista elementów
-    private int actualSize = 0; // dodanie tego powoduje zmiany metody size
 
-    // niestety w instrukcji wywo³uj¹cej konstruktor i w instrukcji po new przy tworzeniu
-    // obiektu nie moze wykorzystac generycznego typu, jedyny typ, to Object
-    // stad jest potrzeba rzutowania go na typ E, zeby mozna bylo dalej korzystac generycznie
-    // tak niestety to musi byc
-
+    private E[] elemenets = (E[]) new Object[10];// myArrayList ma pod spodem zwyk³¹ tablicê typu E
+    private int actualSize = 0; // domyœlnie wynosi 0, nie musimy pisaæ,
 
     @Override
     public boolean add(E e) {
         if (e == null) {
             return false;
-
         }
-        elements[actualSize++] = e;
-        if (actualSize == elements.length) { // jesli koniec miejsca - powieksz zbior
+        elemenets[actualSize++] = e;
+        if (actualSize == elemenets.length) { // jeœli koniec miejsca - powiêksz zbiór
             grow();
         }
-
-        //   actualSize++;
         return true;
     }
+    // dodaj 2x tyle miejsca od aktualnego size 10->20->40->80->160
+    // kiedy chcemy zrobic grow ? Wtedy kiedy wiemy ze nie bêdziemy miec miejsca
+    // np. dodaliœmy element na pozycjê 9, czyli actual size ju¿ zwiekszyl nam siê na pozycjê 10
+    // actual size wynosi tyle ile nasz limit
 
-    private void grow() { // dodaj 2x tyle miejca 10 - 20 -40 - 80 - 160
-        /*
-        E[] newArray = (E[]) new Object[elements.length * 2];
-        // chcemy stworzyc tablice jako typ generyczny, ale musimy rzutowac object na E
-
-
-        for (int i = 0; i < elements.length; i++) { // przerzucamy stare elementy
-            newArray[i] = elements[i]; // do nowej listy
-            elements = newArray;
-         */
-        elements = Arrays.copyOf(elements, elements.length * 2);
-        // elements - tablica ktora kopiujemy, nowy rozmiar eleme... * 2
-        // ustawiamy jako elements
+    private void grow() {
+        elemenets = Arrays.copyOf(elemenets, elemenets.length * 2);
     }
+        /* Sposób 1. pêtla for
+        E[] newArray = (E[]) new Object[elemenets.length * 2];
+        for (int i = 0; i < elemenets.length; i++) { // iloœæ elementów zale¿y od starej listy, bo tyle chcemy przerzuciæ
+            newArray[i] = elemenets[i];
+
+        }
+        elements = newArray;
+
+
+         */ // Sposób 2. Kopiowanie
 
 
     /*
     @Override
     public boolean add(E e) {
-        if (e == null) { // na razi nie akceptujemy nulli
+        if (e == null) { // na razie nie akceptujemy nulli
             return false;
         }
-
-
-        for (int i = 0; i < elements.length; i++) { // przegladam wszystkie
-            if (elements[i] == null) { // z nullem oznacza wolne miejsce
-                elements[i] = e; //jeœli znajdzie, wstawiam
-                break; // koniec przebiegu
+        for (int i = 0; i < elemenets.length; i++) { // przegl¹dam wszystkie elementy w tablicy
+            if (elemenets[i] == null) { // jeœli znajdê null, oznacza wolne miejsce
+                elemenets[i] = e; // wstawiam moj¹ wartoœæ
+                break; // koniec
             }
         }
-        actualSize++; // co daje actuals Size ?
-        return true;          // return true - jesli sie powiedzie
+        actualSize++;
+        return true; // return true - zak³adamy ze add siê powiedzie
     }
 
 
      */
-    // aktualnie mamy tablice 10 pozycji null
-    // for each niemozemy iterowaæ bo nie bedziemym mogli zmienic wartosci w indeksu
-    // musi byc zwykla petla for z indeksem
-    @Override
-    public void add(int index, E element) {
-
-    }
-
     @Override
     public int size() {
         return actualSize;
     }
-/*
-    @Override
-    public int size() {
-
-        for (int i = 0; i < elements.length; i++) {
-            if (elements[i] == null) { // jestem przy ostatnim elemencie wiec i = size
-                return i;
+    /*
+        for (int i = 0; i < elemenets.length; i++) { // iteruje po wartosciach w tablicy
+            if (elemenets[i] == null) { // gdy jestem przy ostatnim elemencie wiec i = size
+                return i; // jeœli tak, zwróc i (rozmiar tablicy)
             }
         }
         return 0;
     }
 
+     */
 
- */
 
+    @Override
+    public void add(int index, E element) {
+
+    }
 
     @Override
     public boolean isEmpty() {
@@ -107,16 +89,6 @@ public class MyArrayList<E> implements List<E> {
 
     @Override
     public Iterator<E> iterator() {
-        return null;
-    }
-
-    @Override
-    public Object[] toArray() {
-        return new Object[0];
-    }
-
-    @Override
-    public <T> T[] toArray(T[] a) {
         return null;
     }
 
@@ -136,20 +108,6 @@ public class MyArrayList<E> implements List<E> {
         return false;
     }
 
-    @Override
-    public boolean addAll(int index, Collection<? extends E> c) {
-        return false;
-    }
-
-    @Override
-    public boolean removeAll(Collection<?> c) {
-        return false;
-    }
-
-    @Override
-    public boolean retainAll(Collection<?> c) {
-        return false;
-    }
 
     @Override
     public void clear() {
@@ -195,6 +153,31 @@ public class MyArrayList<E> implements List<E> {
     @Override
     public List<E> subList(int fromIndex, int toIndex) {
         return null;
+    } // chcemy aby Array list traktowano jak listê
+
+    @Override
+    public Object[] toArray() {
+        return new Object[0];
+    }
+
+    @Override
+    public <T> T[] toArray(T[] a) {
+        return null;
+    }
+
+    @Override
+    public boolean addAll(int index, Collection<? extends E> c) {
+        return false;
+    }
+
+    @Override
+    public boolean removeAll(Collection<?> c) {
+        return false;
+    }
+
+    @Override
+    public boolean retainAll(Collection<?> c) {
+        return false;
     }
 
 }
