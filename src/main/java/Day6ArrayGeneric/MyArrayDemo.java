@@ -13,6 +13,8 @@ public class MyArrayDemo {
         stringContainer.setData("ziemia");
         System.out.println(stringContainer.getData());
 
-        List<Integer> myList = new MyArrayList<>(); //
+     //   List<Integer> myList = new MyArrayList<>(); to siê podkreœla na czerwono, musimy zaimplementowaæ interfejs listy
+
+
     }
 }
