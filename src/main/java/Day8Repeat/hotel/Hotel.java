@@ -20,4 +20,26 @@ public class Hotel {
     public List<Room> getRooms() {
         return rooms;
     }
+
+    public List<Room> getNotOccupiedRooms() {
+        List<Room> result = new ArrayList<>(); // TWORZYMY NOW¥ LISTÊ tego samego typu, ale jest NOWA
+        for (Room room : rooms) { // przegl¹damy oryginalne pokoje
+            if (!room.isOccupied()) { // jesli pokoj NIE jest zajêty wchodzi do listy result (wolnych pokoi)
+                result.add(room);
+
+            }
+
+        }
+        return result;
+    }
+
+    public Room findRoomByNumber(int selectedRoomNumber) throws UserServiceException{ // typ Room, bo chcemy zwróciæ pokój
+        for (Room room : rooms) {
+            if (room.getNr() == selectedRoomNumber) {// jeœli nr pokoju jest równy temu który poda³em
+                return room; // zwróæ pokój WA¯NE !
+
+            }
+        }
+       throw new UserServiceException("Nie znaleziono pokoju o numerze "+  selectedRoomNumber); // 3 opcje do zwrócenia null, wyj¹tek, optional
+    }
 }

@@ -23,6 +23,20 @@ public class Room {
         withBathroom = random.nextBoolean();
     }
 
+    public void book(){
+        occupied = true;
+    }
+    public int getNr() {
+        return nr;
+    }
+
+    public static int getNextNr() {
+        return nextNr;
+    }
+    public static void setNextNr(int nextNr) {
+        Room.nextNr = nextNr;
+    }
+
     @Override
     public String toString() {
         return "Room{" +
@@ -31,5 +45,9 @@ public class Room {
                 ", occupied=" + occupied +
                 ", withBathroom=" + withBathroom +
                 '}';
+    }
+
+    public boolean isOccupied() {
+        return occupied;
     }
 }
