@@ -157,12 +157,32 @@ public class MyArrayList<E> implements List<E> {
 
     @Override
     public E set(int index, E element) {
+        actualSize++;
+        if (actualSize == elemenets.length) {
+            grow();
+        }
+        if (element == null) {
+            return null;
+        }
+        for (int i = 8; i >= index; i--) {
+            elemenets[i + 1] = elemenets[i];
+        }
+        elemenets[index] = element;
         return null;
     }
 
 
+
     @Override
     public E remove(int index) {
+        for (int i = 0; i < elemenets.length; i++) {
+            elemenets[index] = elemenets[index + 1];
+            index++;
+            if (index == elemenets.length - 1) {
+                return null;
+            }
+
+        }
         return null;
     }
 
