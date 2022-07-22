@@ -8,7 +8,7 @@ public class Launcher {
         /*
 Elementy ka¿dej aplikacji:
 -> Klasa startowa - Launcher
--> Klasa interfejsu aplikacji (uzytownik wydaje aplikacji polcenia a ona reprezentuje rezultat. (menu hotelu)
+-> Klasa interfejsu aplikacji (uzytownik wydaje aplikacji polcenia  a ona reprezentuje rezultat. (menu hotelu)
 -> Model danych (np. Room)
 -> Logika biznesowa (polityka udzielania kredytów, kiedy wygrana w grê itp.) – niezale¿ne od interfejsu (User Service)
 -> Trwa³e przechowywanie danych (nie ma nasza aplikacja

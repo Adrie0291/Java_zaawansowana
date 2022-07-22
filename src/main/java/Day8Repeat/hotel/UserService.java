@@ -18,7 +18,7 @@ public class UserService {
         return hotel.getNotOccupiedRooms();
     }
 
-    public void bookRoom(int selectedRoomNumber) throws UserServiceException { // potrzebujê pokoju o tym numerze
+    public void bookRoom(int selectedRoomNumber) throws UserServiceException { // potrzebujê pokoju  o tym numerze
         Room room = hotel.findRoomByNumber(selectedRoomNumber);
         if (room.isOccupied()) {
             throw new UserServiceException("Ten pokój jest zajêty!");

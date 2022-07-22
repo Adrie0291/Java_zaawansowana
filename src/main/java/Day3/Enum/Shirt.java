@@ -3,7 +3,7 @@ package Day3.Enum;
 public class Shirt {
     private Size size;  // zmieniamy typ klasy na klasê enumow¹ czyli Size
 
-    public Shirt(Size size) {  // String -> Size
+    public Shirt(Size size) {  // String  -> Size
         this.size = size;
 
     }

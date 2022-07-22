@@ -16,7 +16,7 @@ public class EnumDemo {
 
 
         for (Size aSize : Size.values()) {              // iterowanie po obiektach w liœcie
-            System.out.println(aSize);                  // wyœwietla informacje z toStringa obiektu Size
+            System.out.println(aSize);                  // wyœwietla infor macje z toStringa obiektu Size
             System.out.println(aSize.getNumericSize()); // wyswietla tylko i wylacznie wartoœæ obiektu
             System.out.println(aSize.name());          // wysiwetla oryginaln¹ nazwê obiektu
             System.out.println(aSize.ordinal());        // numer kolejnoœciowy obiektu

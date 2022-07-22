@@ -22,7 +22,7 @@ public class Hotel {
     }
 
     public List<Room> getNotOccupiedRooms() {
-        List<Room> result = new ArrayList<>(); // TWORZYMY NOW¥ LISTÊ tego samego typu, ale jest NOWA
+        List<Room> result = new ArrayList<>(); // TWORZYMY NOW¥ LISTÊ tego samego typu, ale jest N OWA
         for (Room room : rooms) { // przegl¹damy oryginalne pokoje
             if (!room.isOccupied()) { // jesli pokoj NIE jest zajêty wchodzi do listy result (wolnych pokoi)
                 result.add(room);

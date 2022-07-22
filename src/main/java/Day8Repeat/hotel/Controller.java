@@ -9,7 +9,7 @@ import java.util.ServiceConfigurationError;
 public class Controller {
 
     private UserService userService = new UserService();
-    private boolean running = true; // ustawiamy czy program zamykamy czy nie
+    private boolean running = true; // ustawiamy czy program zamykamy czy  nie
 
     public void startMenu() {
         // przywitanie

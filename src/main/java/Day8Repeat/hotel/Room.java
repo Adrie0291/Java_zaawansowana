@@ -11,7 +11,7 @@ public class Room {
 
     private static int nextNr = 1;
     // pole MUSI byæ statyczne, jeœli zmienimy nr 2 pokoju , to kolejne wywolanie konstr
-    // bedzie widziec juz 2 bo jest tylko jedno takie pole dla wszystkich obiektow
+    // bedzie widziec juz 2 bo jest tylko jedno takie pole dla wszyst kich obiektow
     // wszystkie pokoje widzê jedn¹ zmienn¹ nextNr
 
     public Room() {
