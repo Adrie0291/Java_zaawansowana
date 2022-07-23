@@ -44,6 +44,7 @@ public class PostDemo {
         System.out.println("Nadawanie listu ");
         poczta.sendLetter();
     }
+
 }
 
 
