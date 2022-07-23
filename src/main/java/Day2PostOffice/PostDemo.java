@@ -5,8 +5,7 @@ import java.util.Scanner;
 
 public class PostDemo {
     public static void main(String[] args) {
-        Adres adres1 = new Adres("Kolobrzeska", 39, "12-028");
-        Adres adres2 = new Adres("Gdanska", 1, "39-492");
+
 
         int choose = 0;
         while (choose != 2) {
@@ -24,6 +23,9 @@ public class PostDemo {
                     return;
                 case 3:
                     NadawanieListu();
+                    break;
+                case 4:
+                    wyswietlPaczki();
                     break;
             }
         }
@@ -43,6 +45,11 @@ public class PostDemo {
         Poczta poczta = new Poczta();
         System.out.println("Nadawanie listu ");
         poczta.sendLetter();
+
+    }
+
+    public static void wyswietlPaczki(){
+
     }
 
 }

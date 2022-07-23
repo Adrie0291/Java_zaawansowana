@@ -32,8 +32,7 @@ public class Main {
         System.out.println(kier);
         System.out.println("-----------ALL CARD -----------");
         ArrayList<Card> AllCard = new ArrayList<>();
-        for (
-                Suit suit : Suit.values()) {
+        for (Suit suit : Suit.values()) {
             for (Rank rank : Rank.values()) {
                 Card karta = new Card(rank, suit);
                 AllCard.add(karta);
