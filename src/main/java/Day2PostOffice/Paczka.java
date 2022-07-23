@@ -9,6 +9,7 @@ public class Paczka {
     private boolean isPriority;
     String status = "utworzona";
 
+
     public Paczka(String sender, String recipient, double weight, boolean isPriority) {
         if (sender == "" || sender.isEmpty()) {
             System.out.println("Sender cannot be empty!");
@@ -26,6 +27,46 @@ public class Paczka {
         this.recipient = recipient;
         this.weight = weight;
         this.isPriority = isPriority;
+    }
+
+    public String getSender() {
+        return sender;
+    }
+
+    public void setSender(String sender) {
+        this.sender = sender;
+    }
+
+    public String getRecipient() {
+        return recipient;
+    }
+
+    public void setRecipient(String recipient) {
+        this.recipient = recipient;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public boolean isPriority() {
+        return isPriority;
+    }
+
+    public void setPriority(boolean priority) {
+        isPriority = priority;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public Paczka() {
