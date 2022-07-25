@@ -48,7 +48,9 @@ public class PostDemo {
 
     }
 
-    public static void wyswietlPaczki(){
+    public static void wyswietlPaczki() {
+        Poczta poczta = new Poczta();
+        poczta.showAllPack();
 
     }
 

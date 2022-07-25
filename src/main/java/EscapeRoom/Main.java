@@ -1,9 +1,11 @@
-package Day12EscapeRoom;
+package EscapeRoom;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
+
         System.out.println("Witaj w grze. Masz 3 opcje do wyboru");
         Door door = new Door();
         Key key = new Key();

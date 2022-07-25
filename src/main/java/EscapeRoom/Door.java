@@ -1,4 +1,4 @@
-package Day12EscapeRoom;
+package EscapeRoom;
 
 public class Door {
 

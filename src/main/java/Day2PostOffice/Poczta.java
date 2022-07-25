@@ -10,11 +10,22 @@ public class Poczta {
     ArrayList<Paczka> wszystkiePaczki = new ArrayList<>();
     private int earning = 0;
 
+    public void showAllPack() {
+        if (wszystkiePaczki.isEmpty()) {
+            System.out.println("Nie ma paczek do wyświetlenia");
+        } else {
+            for (Paczka jednaPaczka : wszystkiePaczki) {
+                System.out.println(jednaPaczka);
+
+            }
+        }
+
+    }
 
     public double sendPacakge() {
         Paczka packi = stworzPaczke();
-        System.out.println("Koszt wys�ania paczki wynosi: " + packi.totalPrice());
-        System.out.println("Podaj kwote, kt�r� chcesz zaplacic");
+        System.out.println("Koszt wysłania paczki wynosi: " + packi.totalPrice());
+        System.out.println("Podaj kwotę, którą chcesz zapłacić");
         Scanner scanner = new Scanner(System.in);
         int myMoney = scanner.nextInt();
         if (myMoney >= packi.totalPrice()) {
@@ -22,7 +33,7 @@ public class Poczta {
             earning += packi.totalPrice();
             wszystkiePaczki.add(packi);
         } else {
-            System.out.println("Za ma�o kasy");
+            System.out.println("Za mało kasy");
         }
         return earning;
     }
@@ -35,7 +46,7 @@ public class Poczta {
         String name = scanner.nextLine();
         System.out.println("Podaj imie adresata");
         String adresat = scanner.nextLine();
-        System.out.println("Podaj wag� paczki");
+        System.out.println("Podaj wagę paczki");
         double weight = scanner.nextDouble();
         System.out.println("Czy paczka jest priorytetowa ? false / true");
         boolean priorioty = scanner.hasNext();
@@ -45,7 +56,7 @@ public class Poczta {
     public double sendLetter() {
         if (lisciki.size() < 2) {
             Letter letter1 = stworzList();
-            System.out.println("Koszt wys�ania listu wynosi" + letter1.price());
+            System.out.println("Koszt wysłania listu wynosi" + letter1.price());
             System.out.println("Podaj kwote jaka chcesz zaplacic");
             Scanner scanner = new Scanner(System.in);
             int myMoney = scanner.nextInt();
@@ -54,7 +65,7 @@ public class Poczta {
                 earning += letter1.price();
                 lisciki.add(letter1);
             } else {
-                System.out.println("Za ma�o kasy");
+                System.out.println("Za mało kasy");
 
             }
 
