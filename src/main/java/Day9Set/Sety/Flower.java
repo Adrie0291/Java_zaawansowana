@@ -1,4 +1,4 @@
-package Sety;
+package Day9Set.Sety;
 
 import java.util.Objects;
 

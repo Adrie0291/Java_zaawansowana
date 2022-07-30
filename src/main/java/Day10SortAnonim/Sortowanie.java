@@ -1,5 +1,4 @@
-package Sorto;
-import java.util.ArrayList;
+package Day10SortAnonim;
 import java.util.LinkedList;
 import java.util.List;
 
