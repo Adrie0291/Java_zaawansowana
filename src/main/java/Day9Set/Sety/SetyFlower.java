@@ -3,7 +3,7 @@ package Day9Set.Sety;
 import java.util.HashSet;
 import java.util.Set;
 
-public class SetyKwiaty {
+public class SetyFlower {
     public static void main(String[] args) {
         Set<Flower> kwiaty = new HashSet<>();
         Flower kwiaty1 = new Flower("róża");

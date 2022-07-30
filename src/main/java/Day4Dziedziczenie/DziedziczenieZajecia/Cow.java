@@ -7,3 +7,4 @@ public class Cow extends Animal {
         System.out.println("Muuuuuu");
     }
 }
+

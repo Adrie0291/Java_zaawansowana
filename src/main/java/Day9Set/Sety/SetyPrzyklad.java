@@ -3,7 +3,7 @@ package Day9Set.Sety;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Sety {
+public class SetyPrzyklad {
     public static void main(String[] args) {
         Set<String> zwierzeta = new HashSet<>();
         zwierzeta.add("Krowa");

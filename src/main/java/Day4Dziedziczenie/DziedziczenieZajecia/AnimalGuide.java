@@ -1,6 +1,5 @@
 package Day4Dziedziczenie.DziedziczenieZajecia;
 
-import Day4Dziedziczenie.DziedziczenieZajecia.Animal;
 
 public class AnimalGuide {
 
@@ -39,3 +38,5 @@ public class AnimalGuide {
     }
 
      */
+
+

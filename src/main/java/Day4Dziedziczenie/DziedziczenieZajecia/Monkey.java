@@ -1,6 +1,5 @@
 package Day4Dziedziczenie.DziedziczenieZajecia;
 
-import Day4Dziedziczenie.DziedziczenieZajecia.Animal;
 
 public class Monkey extends Animal {
     private String name;
@@ -37,3 +36,4 @@ public class Monkey extends Animal {
         uhahaha();
     }
 }
+

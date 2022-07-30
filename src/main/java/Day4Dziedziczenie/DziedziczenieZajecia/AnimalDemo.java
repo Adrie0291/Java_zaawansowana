@@ -1,8 +1,10 @@
 package Day4Dziedziczenie.DziedziczenieZajecia;
 
+import java.util.List;
+
 public class AnimalDemo {
     public static void main(String[] args) {
-        /*
+  /*
         Cat monkey = new Cat();
         Cat monkey2 = new Cat("Filutek", 8, 20);
 
@@ -11,7 +13,7 @@ public class AnimalDemo {
 
         monkey.jump();      // ma³pa nr 1
         monkey.uhahaha();
-
+/*
         whale.booing();     // wieloryb nr 2
         whale.swim();
 
@@ -32,10 +34,13 @@ public class AnimalDemo {
         }
 
 
+   */
+
+
         System.out.println("--------- Zwierze Guide -------------");
         AnimalGuide animalGuide = new AnimalGuide();
 
-         */
+
         //   animalGuide.feedMonkey(monkey); 1. metoda nie robiæ tak
         //   animalGuide.feedWhale(whale);   1. metoda nie robiæ tak
       //  animalGuide.feedAnimal(monkey);
@@ -44,11 +49,11 @@ public class AnimalDemo {
         // POLIMORFIZM
 
         System.out.println("--------POLIMORFIZM------");
-        Animal animal = new Whale(); // ogólna zmienna animal (dowolne zwierze) = new Wieloryb() obiekt typu Wieloryb !
+       Animal animal = new Whale(); // ogólna zmienna animal (dowolne zwierze) = new Wieloryb() obiekt typu Wieloryb !
 
-        animal.makeSound(); // klasa Zwierze nie ma metody, ale najpierw wykonuje metode z danej klasy, jesli tam nic nie ma przechodzi do wspolnej klasy !
-        animal = new Monkey(); // animal to zmienna ! tutaj zmieniamy ta zmienna na inny obiekt (ma³pa)
-        animal.makeSound(); // wyswietli sie metoda na klasie Malpa !
+       animal.makeSound(); // klasa Zwierze nie ma metody, ale najpierw wykonuje metode z danej klasy, jesli tam nic nie ma przechodzi do wspolnej klasy !
+      animal = new Monkey(); // animal to zmienna ! tutaj zmieniamy ta zmienna na inny obiekt (ma³pa)
+      animal.makeSound(); // wyswietli sie metoda na klasie Malpa !
 
         /*POLIMORFIZM - ró¿nego rodzaju obiekty mo¿emy wstawiaæ do tego samego typu zmiennej, a wiêc metody tej zmiennej bêd¹ dostosywaæ
           siê do tego jak dany obiekty jaki tam jest tam nadpisuje
@@ -66,7 +71,8 @@ public class AnimalDemo {
         // animal = new Zwierze();
         //  animal.makeSound();
 
-        animal = new Cow();
+
+      animal = new Cow();
         animal.makeSound();
 
     }

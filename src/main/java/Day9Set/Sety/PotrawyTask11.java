@@ -3,7 +3,7 @@ package Day9Set.Sety;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Kolekcje11 {
+public class PotrawyTask11 {
     public static void main(String[] args) {
         Set<String> potrawy = new HashSet<>();
         potrawy.add("schabowy");

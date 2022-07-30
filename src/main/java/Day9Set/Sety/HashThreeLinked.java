@@ -5,7 +5,7 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class ProsteSety {
+public class HashThreeLinked {
     public static void main(String[] args) {
         Set<Integer> number = new HashSet<>();
         number.add(103);
