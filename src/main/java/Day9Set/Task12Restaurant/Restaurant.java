@@ -32,7 +32,7 @@ public class Restaurant {
         throw new RestauranException("Nie znalaz³o dania!");
     }
 
-    List<Dish> findDishByType(DishType type) throws RestauranException {
+    public List<Dish> findDishByType(DishType type) throws RestauranException {
         List<Dish> found = new ArrayList<>();
         for (Dish dish : dishes) {
             if (dish.getType() == type) {

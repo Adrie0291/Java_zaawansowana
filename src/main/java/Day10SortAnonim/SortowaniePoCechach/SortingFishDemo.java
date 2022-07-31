@@ -6,15 +6,15 @@ import java.util.List;
 public class SortingFishDemo {
 
     public static void main(String[] args) {
-        Demo demo = new Demo();
+        SortingFishAlgoritm sortingFishAlgoritm = new SortingFishAlgoritm();
         List<Fish> fishes = new LinkedList<>(List.of(
                 new Fish("pstrag", 2),
                 new Fish("karp", 4),
-                new Fish("losos", 5),
-                new Fish("rekin", 1)
+                new Fish("lososiowe", 5),
+                new Fish("rekin1", 1)
         ));
         System.out.println(fishes);
-        demo.sortBubble(fishes);
+        sortingFishAlgoritm.sortBubble(fishes);
         System.out.println(fishes);
     }
 }
