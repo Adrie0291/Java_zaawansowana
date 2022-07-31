@@ -17,7 +17,7 @@ public class SortingFishDemo {
         sortingFishAlgoritm.sortBubble(fishes, new FishComperator() {
             @Override
             public int compareFish(Fish fish1, Fish fish2) {
-                return fish1.getName().compareTo(fish2.getName());
+                 return fish1.getName().compareTo(fish2.getName());
             }
         });
         System.out.println(fishes );
