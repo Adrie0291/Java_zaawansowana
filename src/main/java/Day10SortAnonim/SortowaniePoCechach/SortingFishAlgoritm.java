@@ -10,7 +10,7 @@ public class SortingFishAlgoritm {
             for (int i = 0; i < fishes.size() - 1 - j; i++) {   // musi byc numbers.size -1 ! IndexOutOfBoundsException
                 Fish first = fishes.get(i);
                 Fish second = fishes.get(i + 1);
-                if (compare2(first, second) > 0) {                        // dostêp do elementów w liscie .get[nr index]
+                if (fishComperator.compareFish(first, second) > 0) {                        // dostêp do elementów w liscie .get[nr index]
                     fishes.set(i, second);
                     fishes.set(i + 1, first);
                 }
