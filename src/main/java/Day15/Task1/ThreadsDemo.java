@@ -9,7 +9,7 @@ public class ThreadsDemo {
             }
         };
         Thread worker = new Thread(task);
-        worker.run();
+        worker.start();
     }
 
 }
