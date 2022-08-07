@@ -18,7 +18,7 @@ public class main {
         };
 
         Thread thread = new Thread(abortingTask);
-           thread.start();
+        thread.start();
         concatenationTask.waitUntilEnd();
         String result = concatenationTask.getResult();
         System.out.println(result.length());
