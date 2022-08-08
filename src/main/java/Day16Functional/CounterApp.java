@@ -1,4 +1,4 @@
-package Day16;
+package Day16Functional;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,11 +19,11 @@ public class CounterApp {
 
         panel.add(button);
         // przygotowanie Licznika klikniêæ
-        JTextField numerField = new JTextField("0",10); // ustawia wp³ywa na szerokoœc pola wyœwietleñ
+        JTextField numerField = new JTextField("0", 10); // ustawia wp³ywa na szerokoœc pola wyœwietleñ
         panel.add(numerField);  // dodanie do panelu licznika
 
         frame.add(panel);       // dodanie do okna
-        frame.pack();
+
 
         ActionListener action = new ActionListener() {
             @Override
@@ -31,9 +31,17 @@ public class CounterApp {
                 System.out.println("Click");
                 int number = Integer.parseInt(numerField.getText());
                 number++;
-                numerField.setText(number +"");
+                numerField.setText(number + "");
             }
         };
         button.addActionListener(action);
+
+        JButton lambdaBUtton = new JButton("Lambda przycisk");
+        panel.add(lambdaBUtton);
+        frame.pack();
+
+        lambdaBUtton.addActionListener((e) -> System.out.println("Hello"));
+
+
     }
 }
