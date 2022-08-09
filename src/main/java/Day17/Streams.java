@@ -4,6 +4,7 @@ package Day17;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.stream.Collectors;
 
 public class Streams {
     public static void main(String[] args) {
@@ -19,9 +20,32 @@ public class Streams {
         products.add(product3);
         products.add(product4);
         products.add(product5);
+        // Wyœwietl produkty które kosztuj¹ mniej ni¿ 5 z³
+        List<Product> odfiltrowane = products.stream()
+                .filter(product -> product.getPrice() < 5)
+                .collect(Collectors.toList()); // zwraca odfiltrowane produkty do nowej listy
+        //  .forEach(product -> System.out.println(product)); wyœwietla ca³a listê
+        System.out.println(odfiltrowane);
 
+        System.out.println("Posortowane ze wzglêdu na cenê produktu: ");
+        // sortowanie wg ceny
+        List<Product> posortowane = products.stream()
+                .sorted((prod1, prod2) -> Double.compare(prod1.getPrice(), prod2.getPrice()))
+                .toList();
+        System.out.println(posortowane);
+
+        System.out.println("Iloœc produktów tañsza ni¿ 10 z³ i których iloœæ jest mniejsza ni¿ 10");
+        products.stream()
+                .filter(product -> product.getPrice() < 10) // odfiltrowanie ze wzglêdu na cenê
+                .map(product -> product.getAmount()) // przekszta³cenie z typu produktu na iloœæ
+                .filter(amount -> amount < 10)      // kolejne filtrowanie, te produkty których iloœc jest mniejsza ni¿ 10
+                .forEach(amount -> System.out.println(amount));
+
+
+        System.exit(0);
         // wyœwietlenie ca³ej listy
         products.forEach(product -> System.out.println(product));
+
 
         //wyœwietlenie ³¹cznej iloœci produktów
 
@@ -34,7 +58,5 @@ public class Streams {
 
         });
         System.out.println(counter);
-
-
     }
 }
