@@ -1,4 +1,4 @@
-package Day15.Task3Synchr;
+package Day15Wielow¹tkowoœæ.Task3Synchr;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

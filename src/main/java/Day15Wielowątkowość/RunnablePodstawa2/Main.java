@@ -1,4 +1,4 @@
-package Day15.RunnablePodstawa2;
+package Day15Wielow¹tkowoœæ.RunnablePodstawa2;
 
 public class Main {
     public static void main(String[] args) {

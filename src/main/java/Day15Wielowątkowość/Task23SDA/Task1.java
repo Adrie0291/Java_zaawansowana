@@ -1,4 +1,4 @@
-package Day15.Task23SDA;
+package Day15Wielow¹tkowoœæ.Task23SDA;
 
 public class Task1 implements Runnable {
 

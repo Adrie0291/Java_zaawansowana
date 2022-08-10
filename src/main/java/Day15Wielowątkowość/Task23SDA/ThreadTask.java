@@ -1,4 +1,4 @@
-package Day15.Task23SDA;
+package Day15Wielow¹tkowoœæ.Task23SDA;
 
 public class ThreadTask {
     public static void main(String[] args) {

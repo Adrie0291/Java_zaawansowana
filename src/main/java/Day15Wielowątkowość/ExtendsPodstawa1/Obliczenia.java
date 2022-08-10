@@ -1,4 +1,4 @@
-package Day15.ExtendsPodstawa1;
+package Day15Wielow¹tkowoœæ.ExtendsPodstawa1;
 
 public class Obliczenia extends Thread {
     @Override

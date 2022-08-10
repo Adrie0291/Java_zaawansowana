@@ -1,4 +1,4 @@
-package Day15.Task1;
+package Day15Wielow¹tkowoœæ.Task1;
 
 public class ThreadsDemo {
     public static void main(String[] args) {

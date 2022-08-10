@@ -1,6 +1,6 @@
-package Day17;
+package Day17.ProduktyPrzyklad1;
 
-public class Product {
+public class Product implements Comparable<Product>  {
     private String name;
     private double price;
     private int amount;
@@ -30,5 +30,10 @@ public class Product {
                 ", price=" + price +
                 ", amount=" + amount +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Product o) {
+        return name.compareTo(o.name);
     }
 }

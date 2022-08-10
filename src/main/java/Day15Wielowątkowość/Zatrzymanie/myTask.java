@@ -1,4 +1,4 @@
-package Day15.Zatrzymanie;
+package Day15Wielow¹tkowoœæ.Zatrzymanie;
 
 public class myTask implements Runnable { //    @Override
     @Override

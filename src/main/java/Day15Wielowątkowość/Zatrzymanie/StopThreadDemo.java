@@ -1,4 +1,4 @@
-package Day15.Zatrzymanie;
+package Day15Wielow¹tkowoœæ.Zatrzymanie;
 
 public class StopThreadDemo {
     public static void main(String[] args) throws InterruptedException {

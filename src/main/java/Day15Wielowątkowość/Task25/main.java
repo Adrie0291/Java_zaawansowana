@@ -1,4 +1,4 @@
-package Day15.Task24;
+package Day15Wielow¹tkowoœæ.Task25;
 
 public class main {
     public static void main(String[] args) {

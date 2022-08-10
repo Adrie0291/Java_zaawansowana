@@ -1,6 +1,4 @@
-package Day15.Task3Synchr;
-
-import java.util.Locale;
+package Day15Wielow¹tkowoœæ.Task3Synchr;
 
 public class CounterTask implements Runnable {
 

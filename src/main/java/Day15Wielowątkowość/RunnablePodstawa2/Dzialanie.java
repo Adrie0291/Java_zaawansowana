@@ -1,4 +1,4 @@
-package Day15.RunnablePodstawa2;
+package Day15Wielow¹tkowoœæ.RunnablePodstawa2;
 
 public class Dzialanie implements Runnable {
     @Override
