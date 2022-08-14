@@ -42,6 +42,7 @@ public class StreamMethodTask {
         System.out.println(newNumbers);
 
         System.out.println("\nE:");
+
         Integer someNumb = numbers.stream()
                 .sorted((num1, num2) -> num2 - num1)
                 .findFirst()
