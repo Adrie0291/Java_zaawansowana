@@ -1,5 +1,7 @@
 package Day18.Chel1;
 
+import Day17.Challenge1.PersonImpl;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
@@ -51,31 +53,48 @@ public class MyStreamService2 implements StreamService {
 
     @Override
     public List<Person> buildPeopleWithNames(List<String> names) {
-        return null;
+        return names.stream()
+                .map(name -> (Person) new MyPersonImpl(name))
+                .toList();
+
     }
 
     @Override
     public List<Person> findPeopleOfIdGreaterThan(List<Person> people, int id) {
-        return null;
+        return people.stream()
+                .filter(person -> person.getId() > id)
+                .toList();
     }
 
     @Override
     public boolean hasSenior(List<Person> people) {
-        return false;
+        return people.stream()
+                .filter(person -> person.getAge() < 60) // lub .anymatch(person -> person.getAge() > 60); tylko to
+                .count() > 0;
     }
 
     @Override
     public double sumTotalCash(List<Person> people) {
-        return 0;
+        return people.stream()
+                .mapToDouble(person -> person.getCash())  // person -> person.getCash() mo¿emy zamieniæna Person::getCash
+                .sum();
+
     }
 
     @Override
     public Person findRichestPerson(List<Person> people) {
-        return null;
+        return people.stream()
+                .sorted((per1, per2) -> Double.compare(per2.getCash(), per1.getCash()))
+                .findFirst()
+                //.get();
+                .orElse(null);
     }
 
     @Override
     public double computeAverageAge(List<Person> people) {
-        return 0;
+        return people.stream()
+                .mapToInt(personn -> personn.getAge())
+                .average()
+                .orElse(-1);
     }
 }

@@ -14,7 +14,6 @@ public class MyPersonImpl extends Person {
 
     @Override
     protected int getRandomCash() {
-        System.out.println(random);
         return random.nextInt(101);
     }
 
