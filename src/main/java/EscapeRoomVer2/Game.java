@@ -3,7 +3,7 @@ package EscapeRoomVer2;
 import java.util.List;
 
 // klasa zarządzająca zasadami gry i działaniem rozgrywki
-public class Game {
+public class Game implements GameEngine, GameInteractions {
     private Room room = new Room(); // tylko zmienna, możemy zmienić w każdej chwili pokój na inny
     private final Player player = new Player();
     private boolean running = true;

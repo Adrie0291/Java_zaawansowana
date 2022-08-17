@@ -6,10 +6,10 @@ public class Key extends Item {
     }
 
     @Override
-    public String use(Game game) {
+    public String use(GameInteractions gameInteractionse) {
         // Key key = this;
-       game.getRoom().removeItem(this);
-        game.getPlayer().add(this);
+       gameInteractionse.getRoom().removeItem(this);
+        gameInteractionse.getPlayer().add(this);
         return "Zabierz klucz";
     }
 }

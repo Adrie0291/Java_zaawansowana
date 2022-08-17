@@ -11,6 +11,6 @@ public abstract class Item {
         return name;
     }
 
-    public abstract String use(Game game);
+    public abstract String use(GameInteractions gameInteractions);
 
 }

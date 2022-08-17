@@ -9,7 +9,7 @@ public class Window extends Item {
     }
 
     @Override
-    public String use(Game game) { // todo, czy da się stąd wywalić ?
+    public String use(GameInteractions gameInteractions) {
         open = !open;
         return open ? "Otwierasz okno" : "Zamykasz okno";
 
