@@ -8,13 +8,10 @@ public class Room {
    private  List<Item> items = new ArrayList<>();
 
    public Room(){
-       Door door = new Door();
        Key key = new Key();
-       Window window = new Window();
-       items.add(new Door());
-       items.add(new Key());
+       items.add(new Door(key));
+       items.add(key);
        items.add(new Window());
-
    }
 
     public List<Item> getItems() {
@@ -22,5 +19,8 @@ public class Room {
     }
     public Item findItemByIndex(int index) {
        return items.get(index);
+    }
+    public void removeItem(Item item) {
+       items.remove(item);
     }
 }

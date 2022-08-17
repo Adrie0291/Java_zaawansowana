@@ -1,20 +1,31 @@
 package EscapeRoomVer2;
 
-public class Window extends Item{
+public class Window extends Item {
 
     private boolean open; // false domyślna
+
     public Window() {
         super("Okno");
     }
 
     @Override
-    public String use() {
-        if(open) {
-            open = false;
-            return("Zamykasz okno");
-        } else {
-            open = true;
-            return("Otwierasz okno");
-        }
+    public String use(Room room, Player player) { // todo, czy da się stąd wywalić ?
+        open = !open;
+        return open ? "Otwierasz okno" : "Zamykasz okno";
+
     }
 }
+        //    int liczba = 10;
+        //     liczba = liczba *-1;
+        //     liczba = -liczba;
+
+        /* alternatywna wersja
+        if (open) {
+            open = false;
+            return ("Zamykasz okno");
+        } else {
+            open = true;
+            return ("Otwierasz okno");
+        }
+
+         */
