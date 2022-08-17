@@ -6,7 +6,7 @@ public class Key extends Item {
     }
 
     @Override
-    public void use() {
-        System.out.println("Uzywam klucza");
+    public String use() {
+        return("Używam klucza");
     }
 }

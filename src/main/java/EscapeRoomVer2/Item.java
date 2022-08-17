@@ -11,6 +11,6 @@ public abstract class Item {
         return name;
     }
 
-    public abstract void use();
+    public abstract String use();
 
 }

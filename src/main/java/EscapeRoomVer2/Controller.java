@@ -8,9 +8,11 @@ public class Controller {
     private Game game = new Game(); // Controller zwraca się do gry aby zlecić różne zadania
 
     public void start() {
-        printMenu();
-        int selection = selectOption();
-        useSelectedItem(selection);
+        do {
+            printMenu();
+            int selection = selectOption();
+            useSelectedItem(selection);
+        } while (true); //  todo
     }
 
     private void printMenu() {
@@ -35,8 +37,8 @@ public class Controller {
     }
 
     private void useSelectedItem(int itemNumber) {
-        System.out.println("Używasz prezdmiotu nr" + itemNumber);
-        game.useItem(itemNumber - 1);
+       String actionResult =  game.useItem(itemNumber - 1);
+        System.out.println(actionResult);
     }
 }
 
