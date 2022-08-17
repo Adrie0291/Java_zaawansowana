@@ -3,7 +3,7 @@ package EscapeRoomVer2;
 import java.util.List;
 import java.util.Scanner;
 
-public class Controller {
+public class Controller  {
     private Scanner scanner = new Scanner(System.in);
     private GameEngine gameEngine = new Game(); // Controller zwraca się do gry aby zlecić różne zadania
 
@@ -42,4 +42,18 @@ public class Controller {
         System.out.println(actionResult);
     }
 }
+
+/*
+rozbudowa:
+więcej pokoi - przejśćie przez drzwi przenosi do innego pomieszczenia z którego potem można wrócić
+inne przedmioty inne zagadki
+
+// więcej przedmiotów które działają na zasadzie wybieram i używam, kraty, wajchy, szuflady
+
+// interkacja z aplikacją
+// zapis stanu gry
+
+// scenariusz
+
+ */
 
