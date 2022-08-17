@@ -6,6 +6,7 @@ import java.util.List;
 public class Game {
     private Room room = new Room(); // tylko zmienna, możemy zmienić w każdej chwili pokój na inny
     private final Player player = new Player();
+    private boolean running = true;
     public List<Item> getItems(){
         return room.getItems();
     }
@@ -13,11 +14,27 @@ public class Game {
     public String useItem(int itemIndex) {
         System.out.println(player);
        Item item = room.findItemByIndex(itemIndex);
-        return item.use(room, player);
+        return item.use(this);
 
     }
 
     public int howManyItems() {
         return getItems().size();
+    }
+
+    public boolean isRunning() {
+        return running;
+    }
+    public void endGame(){
+        running = false;
+    }
+
+    public Room getRoom() {
+        return room;
+    }
+
+
+    public Player getPlayer() {
+        return player;
     }
 }

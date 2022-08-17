@@ -11,6 +11,6 @@ public abstract class Item {
         return name;
     }
 
-    public abstract String use(Room room, Player player);
+    public abstract String use(Game game);
 
 }

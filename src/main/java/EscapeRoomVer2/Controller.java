@@ -12,7 +12,8 @@ public class Controller {
             printMenu();
             int selection = selectOption();
             useSelectedItem(selection);
-        } while (true); //  todo
+        } while (game.isRunning()); //
+        System.out.println("koniec gry");
     }
 
     private void printMenu() {
