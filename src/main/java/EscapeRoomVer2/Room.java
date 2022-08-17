@@ -20,4 +20,7 @@ public class Room {
     public List<Item> getItems() {
         return items;
     }
+    public Item findItemByIndex(int index) {
+       return items.get(index);
+    }
 }
