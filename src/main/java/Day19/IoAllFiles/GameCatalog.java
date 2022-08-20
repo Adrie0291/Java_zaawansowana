@@ -11,6 +11,7 @@ public class GameCatalog {
     GameFileRepository gameFileRepository = new GameFileRepository();
 
     public GameCatalog() {
+
         GameDeveloper gameDeveloper = new GameDeveloper("John", "Project Manager");
         GameDeveloper gameDeveloper2 = new GameDeveloper("Antos", "Junior");
         GameDeveloper gameDeveloper3 = new GameDeveloper("Katie", "Mid");
@@ -25,6 +26,9 @@ public class GameCatalog {
         games.addAll(List.of(game, game2, game3, game4));
 
 
+        saveAllGames();
+        readAllGames();
+
     }
 
     public void addGame(Game game) {
@@ -35,9 +39,9 @@ public class GameCatalog {
         gameFileRepository.saveGames(games);
     }
 
-    public void readAllGames() {
+    private void readAllGames() {
         games = gameFileRepository.readGame();
-        System.out.println(games);
+        //System.out.println(games);
     }
 
     @Override

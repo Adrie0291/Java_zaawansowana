@@ -13,13 +13,12 @@ public class Game implements Serializable {
         this.gameDevelopers = gameDevelopers;
     }
 
+
     @Override
     public String toString() {
         return "Game{" +
                 "title='" + title + '\'' +
                 ", gameDevelopers=" + gameDevelopers +
                 '}' + "\n";
-
-
     }
 }

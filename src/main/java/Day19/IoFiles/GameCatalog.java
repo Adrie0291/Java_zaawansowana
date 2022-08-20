@@ -24,6 +24,8 @@ public class GameCatalog {
                 gameDeveloper4, gameDeveloper5));
         games.addAll(List.of(game, game2, game3, game4));
 
+
+
     }
 
     public void saveAllGames() {
