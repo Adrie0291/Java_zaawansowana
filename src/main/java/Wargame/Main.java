@@ -13,7 +13,7 @@ public class Main {
         System.out.println(wojna.deckFirst());
         System.out.println(wojna.deckSecond());
 
-        wojna.strongerCard();
+        wojna.strongCard();
 
     }
 }

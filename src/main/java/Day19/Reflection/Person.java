@@ -1,7 +1,7 @@
 package Day19.Reflection;
 
-public class Person {
-    private String name;
+public final class Person {
+    private final String name;
     private int age;
 
     public Person(String name, int age) {
