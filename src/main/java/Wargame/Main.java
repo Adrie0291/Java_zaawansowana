@@ -10,9 +10,6 @@ public class Main {
         wojna.playerFirst.setCards(wojna.deckFirst());
         wojna.platerSecond.setCards(wojna.deckSecond());
 
-        System.out.println(wojna.deckFirst());
-        System.out.println(wojna.deckSecond());
-
         wojna.strongCard();
 
     }

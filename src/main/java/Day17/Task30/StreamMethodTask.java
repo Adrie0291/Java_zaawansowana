@@ -3,9 +3,6 @@ package Day17.Task30;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.function.Consumer;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
 
 public class StreamMethodTask {
     public static void main(String[] args) {
@@ -41,7 +38,7 @@ public class StreamMethodTask {
 
         System.out.println(newNumbers);
 
-        System.out.println("\nE:");
+        System.out.println("\nE: Najwiêksza wartoœæ");
 
         Integer someNumb = numbers.stream()
                 .sorted((num1, num2) -> num2 - num1)
