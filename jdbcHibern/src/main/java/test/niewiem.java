@@ -7,7 +7,7 @@ public class niewiem {
     public static void main(String[] args) {
         String url = "jdbc:mysql://localhost:3306/hibernacja"; // gdzie się łączymy
         Properties properties = new Properties();
-        // jak się łączymy
+        // jak się łączymy properites para klucz wartość, można zaciągąc to z pliku
         properties.put("user", "root");
         properties.put("password", "admin");
         properties.setProperty("serverTimezone", "CET");
@@ -18,15 +18,18 @@ public class niewiem {
         try {
             connection = DriverManager.getConnection(url, properties); // z tego połączenia tworzym konkretne zapytania do bazy
             statement = connection.createStatement(); // pusty obiekt zapytnaia
+
+            // * Dodanie użytwkonika
 //            int rowsChanges = statement.executeUpdate("INSERT INTO user2 (name, password, language) VALUES ('adrianbe','haslo200','pl') ");
 //            System.out.println("Rows changed: " + rowsChanges);
 
-
+            // * Wyświetlenie użytkwonika
             //  ResultSet resultSet = statement.executeQuery("SELECT * FROM user2 WHERE language = 'pl';");
             // while(resultSet.next()){
             //    System.out.println(resultSet.getString("name"));
+
             PreparedStatement pstmt = connection.prepareStatement("SELECT * FROM user2 WHERE language = ?");
-            pstmt.setString(1, "pl");
+            pstmt.setString(1, "es");
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
                 System.out.println("program.User form PL: " + rs.getString("name") + " program.User id: " + rs.getInt("id"));
