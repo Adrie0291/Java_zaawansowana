@@ -18,6 +18,7 @@
         <property name="hibernate.hbm2ddl.auto">create</property>
 
         <mapping class = "Employee"/>
+        <mapping class = "Phone"/>
 
     </session-factory>
 </hibernate-configuration>
